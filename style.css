@@ -1,0 +1,879 @@
+
+body{
+    display: flex;
+    justify-content: center;
+    margin-left: -30px;
+    
+}
+
+            /* nav bar component */
+
+.nav{
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: -10px;
+    height: 60px;
+    min-width: 100%;
+    /* background-color: bisque; */
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    overflow: hidden;
+}
+
+
+.navMobile{
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: -10px;
+    height: 60px;
+    min-width: 100%;
+    /* background-color: bisque; */
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    overflow: hidden;
+}
+
+.nav1{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-left: 40px;
+    gap: 40px;
+    
+}
+
+#logo{
+    background-color: transparent;
+    border: 0px;
+    
+}
+
+.HomeButton{
+    font-size: 20px;
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 50px;
+    margin-top: 4px;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    font-weight: bold;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+}
+
+#logo:active{
+   font-size: 15px;
+}
+
+.nav2{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 25px;
+
+
+}
+
+.nav input{
+    height: 30px;
+    width: 300px;
+    margin-top: 10px;
+    margin-right: 30px;
+}
+
+.cartImage{
+    display: flex;
+    justify-content: center;
+    background-image: url("cart.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 45px;
+    width: 50px;
+    cursor: pointer;
+    margin-top: 5px;
+
+
+}
+
+#countValue{
+    font-size: 15px;
+    font-family: montserrat-semibold, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -1px;
+    margin-right: -22px;
+    height: 22px;
+    width: 22px;
+    background-color: rgba(241, 96, 43, 1);
+    border-radius: 50px;
+    
+}
+
+.visibility{
+    visibility: hidden;
+}
+
+.hidden{
+    display: none;
+}
+
+
+
+
+
+            /* COMMON PAGE COMPONENT */
+
+
+.commonPage{
+    padding: 5px; 
+    margin-top: 70px;
+    margin-left: 80px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+    position: absolute;
+    width: 80%;
+    min-height: 100%;
+    /* border: 1px solid black; */
+    /* background: linear-gradient(130deg ,rgba(35, 37, 142, 0.812) , rgb(82, 26, 96) ); */
+
+}
+
+.commonPageNot{
+    padding: 5px; 
+    margin-top: 70px;
+    margin-left: 80px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+    position: absolute;
+    width: 80%;
+    min-height: 100%;
+    /* border: 1px solid black; */
+    display: none;
+    /* background: linear-gradient(130deg ,rgba(35, 37, 142, 0.812) , rgb(82, 26, 96) ); */
+    display: none;
+}
+
+.commonPageMobile{
+    padding: 5px; 
+    margin-top: 70px;
+    margin-left: 80px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    background-color: aqua;
+    /* border: 1px solid black; */
+    /* background: linear-gradient(130deg ,rgba(35, 37, 142, 0.812) , rgb(82, 26, 96) ); */
+
+}
+
+.product{
+    /* margin-left: 20px; */
+    position: relative;
+    /* border: 1px solid black; */
+    height: 460px;
+    width: 238px;
+    cursor: pointer;
+    left: 35px;
+}
+
+/* styling all the element of product in common page */
+
+.product img{
+    height: 300px;
+    width: 238px;
+    
+}
+
+#bewakoof{
+    width: 220px;
+    margin-top: 1px;
+    margin-left: 12px;
+    font-size: 13px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+#productName{
+    white-space: nowrap;
+    overflow: hidden;
+    /* border: 1px solid black; */
+    text-overflow: ellipsis;
+    width: 220px;
+    margin-top: 5px;
+    margin-left: 12px;
+    font-size: 12px;
+    font-weight: bold;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+#productName::after{
+    content: "...";
+}
+
+#Allprice{
+    width: 220px;
+    margin-top: 10px;
+    margin-left: 12px;
+    font-size: 14px;
+    font-weight: bold;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+#price{
+    width: 220px;
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#price::before{
+    content: "₹";
+}
+
+#originalPrice{
+    margin-left: 10px;
+    opacity: .5;
+    font-size: 10px;
+    text-decoration: line-through;
+}
+
+#originalPrice::before{
+    content: "₹";
+}
+
+#discount{
+    margin-left: 5px;
+    color: green;
+    font-size: 14px;
+}
+
+#star{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    padding: 2px;
+    width: 50px;
+    margin-top: 10px;
+    margin-left: 13px;
+    font-size: 12px;
+    font-weight: bold;
+    border: 1px solid black;
+    background-color: rgba(230, 221, 221, 0.2);
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+
+
+#star img{
+    margin-left: -1px;
+    height: 13px;
+    width: 13px;
+}
+
+#tag{
+    text-align: center;
+    width: 80px;
+    margin-top: 12px;
+    padding: 5px;
+    margin-left: 12px;
+    font-size: 10px;
+    font-family:Arial, Helvetica, sans-serif;
+    border: 2px solid black;
+}
+
+
+       /* PRODUCT PAGE  */
+
+.productPage{
+margin-top: 60px;
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+position: absolute;
+width: 90%;
+min-height: 100%; 
+border: 1px solid red;
+margin-left: 40px;
+
+}
+
+.productPageNot{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: absolute;
+    width: 100%;
+    min-height: 100%;
+    display: none; 
+    
+}
+
+.left{
+    
+    width: 450px;
+    height: 500px;
+    border: 1px solid black;
+    margin-top: 10px;
+}
+
+.right{
+    margin-left: 10px;
+    width: 450px;
+    height: 500px;
+    
+}
+
+/* styling of element of text */
+
+#bewakoofF{
+    font-weight: bold;
+    font-family: montserrat-semibold, sans-serif;
+    font-size: 18px;
+}
+
+#productNameF{
+    white-space: nowrap;
+    color: #737373;
+    font-size: 16px;
+    opacity: .7;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-top: 12px;
+}
+
+#priceF{
+    font-size: 19px;
+    font-weight: bold;
+    font-family:Verdana, Geneva, Tahoma, sans-serif; 
+    margin-top: 15px;
+    margin-right: 10px;
+}
+
+#priceF::before{
+    content: "₹";
+}
+
+#originalPriceF{
+    font-size: 15px;
+    text-decoration: line-through;
+    opacity: .4;
+    margin-right: 10px;
+
+}
+
+#originalPriceF::before{
+    content: "₹";
+}
+
+
+#discountF{
+    margin-left: -2px;
+    color: green;
+    font-size: 17px;
+}
+
+#taxF{
+    margin-top: 7px;
+    font-size: 15px;
+    color: #737373;
+    opacity: .8;
+}
+
+#starF{
+    text-align: center;
+    display: flex;
+    justify-content:flex-end;
+    width: 60px;
+    height: 20px;
+    margin-top: -27px;
+    margin-left: 3px;
+    padding: 3px;
+    font-size: 16px;
+    font-weight: bold;
+    border: 1px solid black;
+    background-color: rgba(230, 221, 221, .3);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+.right img{
+    height: 20px;
+    width: 20px;
+    margin-left: 8px;
+}
+
+#tagF{
+    text-align: center;
+    width: 120px;
+    margin-top: 12px;
+    padding: 6px;
+    margin-left: 3px;
+    font-size: 14px;
+    font-family:Arial, Helvetica, sans-serif;
+    border: 2px solid black;
+}
+
+#offerF{
+    white-space: nowrap;
+    border: 4px solid rgba(115, 115, 115, .17);
+    padding: 13px;
+    margin-top: 15px;
+    border-right: none;
+    border-left: none;
+    font-size: 15px;
+}
+
+.size{
+    margin-left: -10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    
+    
+
+}
+.s{
+    border: 1px solid black;
+    display: grid;
+    margin-left: 10px;
+    padding: 10px;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+}
+
+.button{
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+    
+
+}
+
+#buy{
+    margin-left: -5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 270px;
+    padding: 15px;
+    background-color: rgba(241, 96, 43, 0.6);
+    gap: 5px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+}
+
+#buy:active{
+    border: 1px solid black;
+    background-color: rgba(241, 96, 43, 0.9);
+
+}
+
+#buy img{
+    height: 23px;
+
+}
+
+#addCart{
+    margin-left: -5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 200px;
+    padding: 15px;
+    background: transparent;
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 1px;
+    overflow: hidden;
+}
+
+#addCart img{
+    height: 30px;
+    margin-left: -10px;
+    width: 35px;
+    
+}
+
+
+#cartText{
+    opacity: 1;
+    animation: vanish 2s steps(2) 0s 1 ;
+}
+
+#cartMove{
+    animation: cartGo 1s ease-in-out 0s 1;
+
+}
+
+@keyframes vanish{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes cartGo {
+    0%{
+        transform: translateX(0px);
+    }
+    100%{
+        transform: translateX(200px);
+    }
+    
+}
+
+
+/* Component of Buy now page */
+
+
+.buyPage{
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: absolute;
+    width: 80%;
+}
+
+.buyPageNot{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: absolute;
+    width: 80%;
+    min-height: 100%;
+    display: none;
+}
+
+.leftBuy{
+    border: 1px solid black;
+    display: flex;
+    justify-content: flex-start;
+    gap: 50px;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    height: 100%;
+}
+
+.itemBuy{
+    margin-top: 30px;
+    /* border: 1px solid black; */
+    width: 400px;
+    display: flex;
+    justify-content:start;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.discountBuy{
+    margin-top: -10px;
+    margin-bottom: -25px;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 400px;
+    display: flex;
+    gap: 5px;
+    justify-content: flex-start;
+
+}
+
+.totalBuy{
+    width: 400px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 12px;
+    flex-direction: column;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: -10px;
+    margin-bottom: -20px;
+}
+
+.itemBuy1{
+    /* border: 1px solid black; */
+    height: 70px;
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -10px;
+    margin-bottom: -10px;
+}
+
+
+.productBuy{
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: flex-start;
+    width: 120px;
+    cursor:pointer;
+
+}
+
+.productBuy::before{
+    content: "1";
+    font-size: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 8px;
+    top: -7px;
+    height: 15px;
+    width: 15px;
+    color: white;
+    background-color: black;
+    border-radius: 50px;
+}
+
+.Pname{
+    margin-left: 10px;
+    font-size: 14px;
+    margin-top: 5px;
+    height: 20px;
+    width: 60px;
+    white-space: nowrap;
+    overflow: hidden;
+    /* border: 1px solid black; */
+    text-overflow: ellipsis;
+}
+
+.Pname1{
+    font-size: 14px;
+    overflow: hidden;
+    /* border: 1px solid black; */
+    width: 60px;
+    margin-left: -51px;
+    margin-top: 21px;
+}
+
+
+.Pname::after{
+    content: "...";
+}
+
+.productPrice{
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.productBuy img{
+    height: 50px;
+    width: 50px;
+    background-size: contain;
+    border-radius: 5px;
+}
+
+.Pprice{
+    color: black;
+    margin-top: 15px;
+}
+
+
+.Pprice::after{
+    content: " ₹";
+}
+
+/* design of discount */
+
+#discountPlace{
+    height: 40px;
+    width: 300px;
+    border-radius: 5px;
+    border: 1px solid black;
+    padding-left: 10px;
+    outline: none;
+}
+
+.discountBuy button{
+    width: 80px;
+    padding: 10px;
+    color: azure;
+    background-color: rgba(24, 24, 251, 0.6);
+    border-radius: 5px;
+}
+
+.discountBuy button:active{
+    background-color: rgba(24, 24, 251, 0.9);
+
+
+}
+
+.disBuy{
+    font-size: 16px;
+    color: green;
+    font-weight: 500;
+
+}
+.disBuy::after{
+    content: " ₹";
+}
+
+
+/* design of summary or price */
+
+.summaryBuy{
+    /* border: 1px solid black; */
+    width: 380px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: -10px;
+    padding: 5px;
+
+}
+
+#PriceBuy{
+    font-size: 16px;
+
+}
+#PriceBuy::after{
+    content: " ₹";
+}
+
+#PriceBuy2{
+    font-size: 16px;
+}
+
+#PriceBuy2::after{
+    content: " ₹";
+}
+
+.finalBuy{
+    width: 450px;
+    display: flex;
+    justify-content: space-around;
+    gap: 150px;
+    margin-top: -20px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 1px solid black;
+    background-color: rgba(213, 199, 199, 0.2);
+
+}
+
+#PriceBuy1{
+    margin-top: 6px;
+    font-size: 22px;
+    margin-left: 18px;
+    font-weight: bolder;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#PriceBuy1::before{
+    content: "₹ ";
+}
+
+#ToBuy{
+    background-color: rgba(24, 24, 251, 0.6);
+    margin-right: 10px;
+    color: white;
+    border-radius: 5px;
+    padding: 10px 30px 10px 30px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.productBuy1{
+    display: flex;
+    align-items: center;
+}
+
+
+
+.rightBuy{
+    height: 100%;
+    padding-bottom: 30px;
+    width: 451px;
+    border: 1px solid black;
+} 
+
+#rightC{
+    margin-left: 20px;
+    margin-top: 20px;
+    font-size: 19px;
+}
+
+#FnameCus{
+    margin-top: 10px;
+    margin-left: 17px;
+    width: 190px;
+    height: 30px;
+}
+
+#LnameCus{
+    margin-left: 17px;
+    width: 190px;
+    height: 30px;
+}
+
+#numberCus{
+    display: block;
+    margin-left: 17px;
+    margin-top: 30px;
+    width: 190px;
+    height: 30px;
+}
+
+#AddressCus{
+    display: block;
+    margin-left: 17px;
+    margin-top: 30px;
+    width: 410px;
+    height: 60px;
+
+}
+
+#cityCus{
+    margin-left: 17px;
+    margin-top: 30px;
+    width: 190px;
+    height: 30px;
+
+}
+
+#stateCus{
+    margin-left: 17px;
+    margin-top: 30px;
+    width: 190px;
+    height: 30px;
+}
+
+#zipCus{
+    margin-left: 17px;
+    margin-top: 30px;
+    width: 190px;
+    height: 30px;
+}
