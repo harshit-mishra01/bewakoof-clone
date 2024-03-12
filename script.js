@@ -21,6 +21,22 @@ const ComeHome = ()=>{
 
 let e=document.querySelectorAll('#text');
 
+if(window.innerWidth<850){
+    e.forEach(function(element){
+        element.classList.add('hidden');
+        document.getElementById('nav1').classList.add('navMobile');
+    })
+}
+else{
+    
+    e.forEach(function(element){
+        element.classList.remove('hidden');
+        document.getElementById('nav1').classList.add('navMobile');
+        
+
+    })
+}
+
 window.addEventListener("resize" , ()=>{
     if(window.innerWidth<850){
         e.forEach(function(element){
@@ -330,7 +346,7 @@ cartBuy.addEventListener("click" , ()=>{
 
 
 let discountBtn=document.getElementById('discountButton');
-
+let discountCounter=false;
 let discountValue=0;
 let discountCoupon=[
     {coupon:"lmao",value:-200},
@@ -341,7 +357,7 @@ let discountCoupon=[
 let discountName=document.getElementById('discountPlace').value;
 discountBtn.addEventListener('click' ,()=>{
     total=document.getElementById('PriceBuy1').innerText; //total amount variable
-    let discountCounter=true;
+    discountCounter=true;
     discountName=document.getElementById('discountPlace').value;
     if(discountName==""){
         discountCounter=false;
@@ -383,7 +399,6 @@ discountBtn.addEventListener('click' ,()=>{
 
         total=parseFloat(total)+discountValue; //it will calculate price before or remove discount
         document.getElementById('PriceBuy1').innerText=parseFloat(total); //total amount variable
-
         console.log(typeof(total));
         console.log(total);
         
@@ -398,7 +413,7 @@ discountBtn.addEventListener('click' ,()=>{
     //check if discount is applied or not
     if(discountBtn.innerText==="REMOVE" && discountCounter!=false){
         discountBtn.innerText="APPLY";
-
+        discountCounter=false;
         //it wil enable the discount field
         document.getElementById('discountPlace').disabled=false;
         document.getElementById('discountPlace').value="";
@@ -439,13 +454,17 @@ del.addEventListener("click",(e)=>{
         total=50;
         document.getElementById('PriceBuy1').innerText=total;
 
-        //it will remove discount if applied
-
-        
+        //it will remove discount if applied and reset field
+        if(discountCounter==true){
+        var t=document.getElementsByClassName('summaryBuy');
+        t[3].remove();
+        document.getElementById('discountPlace').disabled=false;
+        document.getElementById('discountPlace').value="";
+        }
         //come back to common page
         ComeHome();
         document.getElementById('countValue').classList.add('visibility');
-    
+        
     }
 
     //calculate subtotal price
@@ -453,10 +472,11 @@ del.addEventListener("click",(e)=>{
     console.log(subTotal);
     document.getElementById('PriceBuy').innerText=subTotal;
 
-    //it will calculate Total with tax
+    //it will calculate Total with tax and discount if exist
     tax=subTotal*0.05;
     parseFloat(tax.toFixed(3));
     total=subTotal+tax+50;
+    console.log(discountValue,'1');
     document.getElementById('PriceBuy1').innerText=total;
     document.getElementById('PriceBuy2').innerText=tax;
 

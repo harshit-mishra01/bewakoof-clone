@@ -17,7 +17,7 @@ body{
     /* background-color: bisque; */
     border: 1px solid black;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     overflow: hidden;
 }
@@ -134,15 +134,16 @@ body{
 .commonPage{
     padding: 5px; 
     margin-top: 70px;
-    margin-left: 80px;
+    margin-left: 40px;
     display: flex;
     justify-content: flex-start;
     gap: 20px;
     flex-wrap: wrap;
     position: absolute;
-    width: 80%;
+    /* width: 76vw; */
+    width: 86vw;
     min-height: 100%;
-    /* border: 1px solid black; */
+   
     /* background: linear-gradient(130deg ,rgba(35, 37, 142, 0.812) , rgb(82, 26, 96) ); */
 
 }
@@ -164,21 +165,26 @@ body{
     display: none;
 }
 
-.commonPageMobile{
-    padding: 5px; 
-    margin-top: 70px;
-    margin-left: 80px;
-    display: flex;
-    justify-content: flex-start;
-    gap: 20px;
-    flex-wrap: wrap;
-    position: absolute;
-    width: 100px;
-    height: 100%;
-    background-color: aqua;
-    /* border: 1px solid black; */
-    /* background: linear-gradient(130deg ,rgba(35, 37, 142, 0.812) , rgb(82, 26, 96) ); */
 
+/* to add a product  */
+
+.add{
+    /* margin-left: 20px; */
+    background-color: aliceblue;
+    position: relative;
+    border: 1px solid black;
+    height: 300px;
+    width: 238px;
+    cursor: pointer;
+    left: 35px;
+}
+
+#addButton{
+    margin-left: 75px;
+    margin-top: 130px;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid black;
 }
 
 .product{
@@ -202,7 +208,7 @@ body{
 #bewakoof{
     width: 220px;
     margin-top: 1px;
-    margin-left: 12px;
+
     font-size: 13px;
     font-family:Arial, Helvetica, sans-serif;
 }
@@ -214,7 +220,7 @@ body{
     text-overflow: ellipsis;
     width: 220px;
     margin-top: 5px;
-    margin-left: 12px;
+    
     font-size: 12px;
     font-weight: bold;
     font-family:Arial, Helvetica, sans-serif;
@@ -227,7 +233,7 @@ body{
 #Allprice{
     width: 220px;
     margin-top: 10px;
-    margin-left: 12px;
+    
     font-size: 14px;
     font-weight: bold;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
@@ -270,8 +276,7 @@ body{
     gap: 7px;
     padding: 2px;
     width: 50px;
-    margin-top: 10px;
-    margin-left: 13px;
+    margin-top: 10px;
     font-size: 12px;
     font-weight: bold;
     border: 1px solid black;
@@ -280,8 +285,7 @@ body{
 }
 
 
-#star img{
-    margin-left: -1px;
+#star img{
     height: 13px;
     width: 13px;
 }
@@ -289,9 +293,9 @@ body{
 #tag{
     text-align: center;
     width: 80px;
-    margin-top: 12px;
+    margin-top:12px;
     padding: 5px;
-    margin-left: 12px;
+    
     font-size: 10px;
     font-family:Arial, Helvetica, sans-serif;
     border: 2px solid black;
@@ -306,9 +310,9 @@ display: flex;
 justify-content: center;
 flex-wrap: wrap;
 position: absolute;
-width: 90%;
+width: 90vw;
 min-height: 100%; 
-border: 1px solid red;
+/* border: 1px solid red; */
 margin-left: 40px;
 
 }
@@ -326,30 +330,34 @@ margin-left: 40px;
 }
 
 .left{
-    
-    width: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30vw;
     height: 500px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     margin-top: 10px;
 }
 
 .right{
-    margin-left: 10px;
+    margin-left: 30px;
     width: 450px;
     height: 500px;
-    
+    padding-bottom: 50px;
+    /* border: 1px solid black; */
 }
 
 /* styling of element of text */
 
 #bewakoofF{
+    
     font-weight: bold;
     font-family: montserrat-semibold, sans-serif;
     font-size: 18px;
 }
 
 #productNameF{
-    white-space: nowrap;
+    
     color: #737373;
     font-size: 16px;
     opacity: .7;
@@ -358,6 +366,7 @@ margin-left: 40px;
 }
 
 #priceF{
+    
     font-size: 19px;
     font-weight: bold;
     font-family:Verdana, Geneva, Tahoma, sans-serif; 
@@ -389,6 +398,7 @@ margin-left: 40px;
 }
 
 #taxF{
+    
     margin-top: 7px;
     font-size: 15px;
     color: #737373;
@@ -402,7 +412,7 @@ margin-left: 40px;
     width: 60px;
     height: 20px;
     margin-top: -27px;
-    margin-left: 3px;
+    
     padding: 3px;
     font-size: 16px;
     font-weight: bold;
@@ -415,7 +425,7 @@ margin-left: 40px;
 .right img{
     height: 20px;
     width: 20px;
-    margin-left: 8px;
+    margin-left: 6px;
 }
 
 #tagF{
@@ -423,30 +433,29 @@ margin-left: 40px;
     width: 120px;
     margin-top: 12px;
     padding: 6px;
-    margin-left: 3px;
+    
     font-size: 14px;
     font-family:Arial, Helvetica, sans-serif;
     border: 2px solid black;
 }
 
 #offerF{
-    white-space: nowrap;
     border: 4px solid rgba(115, 115, 115, .17);
-    padding: 13px;
+    padding: 5px;
     margin-top: 15px;
+    line-height: 25px;
+    text-align: start;
     border-right: none;
     border-left: none;
+    width: 330px;
     font-size: 15px;
 }
 
 .size{
-    margin-left: -10px;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    
-    
-
+    margin-left: -12px;
 }
 .s{
     border: 1px solid black;
@@ -462,27 +471,32 @@ margin-left: 40px;
 }
 
 .button{
-    margin-top: 15px;
+    margin-left: -10px;
     display: flex;
+    width: 330px;
+    flex-wrap: wrap;
+    justify-content:center;
+    margin-top: 15px;
+    display: flex;   
     gap: 10px;
-    
-
+    /* border: 1px solid black; */
 }
 
 #buy{
-    margin-left: -5px;
     display: flex;
+    font-size: 13px;
     justify-content: center;
     align-items: center;
     height: 40px;
-    width: 270px;
-    padding: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
     background-color: rgba(241, 96, 43, 0.6);
-    gap: 5px;
+    gap: 7px;
     border: none;
     cursor: pointer;
     font-weight: bold;
     letter-spacing: 1px;
+    border: 2px solid black;
 
 }
 
@@ -499,11 +513,11 @@ margin-left: 40px;
 
 #addCart{
     margin-left: -5px;
+    font-size: 13px;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 40px;
-    width: 200px;
     padding: 15px;
     background: transparent;
     cursor: pointer;
@@ -554,12 +568,16 @@ margin-left: 40px;
 
 
 .buyPage{
-    margin-top: 70px;
+    margin-top: 60px;
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     position: absolute;
-    width: 80%;
+    width: 55vw;
+    min-height: 35vw; 
+    /* border: 1px solid red; */
+    margin-left: 40px;
 }
 
 .buyPageNot{
@@ -568,29 +586,35 @@ margin-left: 40px;
     justify-content: center;
     flex-wrap: wrap;
     position: absolute;
-    width: 80%;
-    min-height: 100%;
     display: none;
 }
 
 .leftBuy{
-    border: 1px solid black;
+    /* border: 1px solid black;
     display: flex;
     justify-content: flex-start;
     gap: 50px;
     align-items: center;
     flex-direction: column;
     overflow: hidden;
-    height: 100%;
+    height: 100%; */
+    display: flex;
+    width: 360px;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    border: 1px solid black;
+    
 }
 
 .itemBuy{
-    margin-top: 30px;
+    margin-top: 10px;
+    margin-bottom: -20px;
     /* border: 1px solid black; */
-    width: 400px;
+    width: 360px;
     display: flex;
-    justify-content:start;
-    gap: 10px;
+    /* justify-content:center; */
+    align-items: center;
     flex-direction: column;
 }
 
@@ -601,15 +625,18 @@ margin-left: 40px;
     border-top: 1px solid black;
     padding-top: 10px;
     padding-bottom: 10px;
-    width: 400px;
+    height: 50px;
+    width: 340px;
     display: flex;
-    gap: 5px;
+    gap: 10px;
     justify-content: flex-start;
+    align-items: center;
 
 }
 
 .totalBuy{
-    width: 400px;
+    width: 360px;
+    border: 1px solid black;
     display: flex;
     justify-content: flex-start;
     gap: 12px;
@@ -618,17 +645,18 @@ margin-left: 40px;
     padding-bottom: 10px;
     margin-top: -10px;
     margin-bottom: -20px;
+
 }
 
 .itemBuy1{
     /* border: 1px solid black; */
     height: 70px;
-    width: 400px;
+    width: 350px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: -10px;
-    margin-bottom: -10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 
@@ -699,6 +727,7 @@ margin-left: 40px;
 .Pprice{
     color: black;
     margin-top: 15px;
+    margin-right: 12px;
 }
 
 
@@ -745,8 +774,9 @@ margin-left: 40px;
 /* design of summary or price */
 
 .summaryBuy{
+    margin-left: 10px;
     /* border: 1px solid black; */
-    width: 380px;
+    width: 330px;
     display: flex;
     justify-content: space-between;
     margin-top: -10px;
@@ -771,10 +801,10 @@ margin-left: 40px;
 }
 
 .finalBuy{
-    width: 450px;
+    width: 360px;
     display: flex;
-    justify-content: space-around;
-    gap: 150px;
+    justify-content: center;
+    gap: 110px;
     margin-top: -20px;
     margin-bottom: 10px;
     padding-top: 10px;
@@ -785,9 +815,11 @@ margin-left: 40px;
 }
 
 #PriceBuy1{
+    width: 120px;
+    text-align: center;
     margin-top: 6px;
     font-size: 22px;
-    margin-left: 18px;
+    /* border: 1px solid black; */
     font-weight: bolder;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
@@ -816,64 +848,64 @@ margin-left: 40px;
 .rightBuy{
     height: 100%;
     padding-bottom: 30px;
-    width: 451px;
+    width: 360px;
     border: 1px solid black;
 } 
 
 #rightC{
-    margin-left: 20px;
+    margin-left: 35px;
     margin-top: 20px;
     font-size: 19px;
 }
 
 #FnameCus{
     margin-top: 10px;
-    margin-left: 17px;
-    width: 190px;
+    margin-left: 27px;
+    width: 140px;
     height: 30px;
 }
 
 #LnameCus{
-    margin-left: 17px;
-    width: 190px;
+    margin-left: 7px;
+    width: 140px;
     height: 30px;
 }
 
 #numberCus{
     display: block;
-    margin-left: 17px;
     margin-top: 30px;
-    width: 190px;
+    margin-left: 27px;
+    width: 140px;
     height: 30px;
 }
 
 #AddressCus{
     display: block;
-    margin-left: 17px;
     margin-top: 30px;
-    width: 410px;
-    height: 60px;
+    margin-left: 27px;
+    width: 300px;
+    height: 30px;
 
 }
 
 #cityCus{
-    margin-left: 17px;
     margin-top: 30px;
-    width: 190px;
+    margin-left: 27px;
+    width: 140px;
     height: 30px;
 
 }
 
 #stateCus{
-    margin-left: 17px;
     margin-top: 30px;
-    width: 190px;
+    margin-left: 7px;
+    width: 140px;
     height: 30px;
 }
 
 #zipCus{
-    margin-left: 17px;
     margin-top: 30px;
-    width: 190px;
+    margin-left: 27px;
+    width: 140px;
     height: 30px;
 }
